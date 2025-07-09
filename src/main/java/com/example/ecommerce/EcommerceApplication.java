@@ -14,7 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class EcommerceApplication {
-	/** Static initializer block to load .env variables before the Spring application context is created. */
+	// Static initializer block to load .env variables before the Spring application context is created.
 	static {
 		Dotenv dotenv = Dotenv.configure()
 				.ignoreIfMissing()
