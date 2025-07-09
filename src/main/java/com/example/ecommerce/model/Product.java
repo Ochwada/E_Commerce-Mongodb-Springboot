@@ -18,7 +18,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data // Lombok annotation to automatically generate getters, setters, toString(), equals(), and hashCode() methods.
 @NoArgsConstructor
 @AllArgsConstructor
-@RequiredArgsConstructor // exclude id from all arg constructor
+//@RequiredArgsConstructor // exclude id from all arg constructor
 @Document(collection = "products")
 public class Product {
     /** Unique identifier for the product */
