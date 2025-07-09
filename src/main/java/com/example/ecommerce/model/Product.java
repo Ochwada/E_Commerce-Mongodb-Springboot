@@ -1,6 +1,5 @@
 package com.example.ecommerce.model;
 
-
 import lombok.*;
 import org.springframework.data.annotation.*;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -12,10 +11,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
  * Author: Ochwada
  * Date: Wednesday, 09.Jul.2025, 10:58 AM
  * Description: Represent a product in our eCommerce catalog.
- * Objective:
+ * Objective: Product Model
  * *******************************************************
  */
-
 
 @Data // Lombok annotation to automatically generate getters, setters, toString(), equals(), and hashCode() methods.
 @NoArgsConstructor
