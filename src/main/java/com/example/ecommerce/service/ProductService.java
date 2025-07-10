@@ -105,4 +105,13 @@ public class ProductService {
         return  productRepository.save(update);
     }
 
+    /**
+     * Deletes a Product by its unique identifier.
+     *
+     * @param id The unique identifier of the Product to delete.
+     *           If the ID does not exist, no action is taken.
+     */
+    public void deleteProduct(String id){
+        productRepository.deleteById(id);
+    }
 }

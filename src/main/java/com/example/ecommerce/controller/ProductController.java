@@ -4,6 +4,7 @@ package com.example.ecommerce.controller;
 import com.example.ecommerce.model.Product;
 import com.example.ecommerce.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -117,5 +118,17 @@ public class ProductController {
     public Product updateProductById(@PathVariable String id,
                                  @RequestBody Product product){
         return productService.updateProduct(id, product);
+    }
+
+    /**
+     * Deletes a Product by its unique identifier.
+     *
+     * @param id The unique identifier of the Product to delete.
+     * @return A {@link ResponseEntity} with HTTP status 204 No Content.
+     */
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteProductById(@PathVariable String id){
+        productService.deleteProduct(id);
+        return ResponseEntity.noContent().build();
     }
 }
