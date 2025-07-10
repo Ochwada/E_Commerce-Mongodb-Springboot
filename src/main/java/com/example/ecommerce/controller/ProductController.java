@@ -105,4 +105,17 @@ public class ProductController {
     public Optional<Product> getProductById(@PathVariable String id){
         return  productService.getProductById(id);
     }
+
+    /**
+     * Updates an existing Product by its unique identifier.
+     *
+     * @param id   The unique identifier of the Product to update.
+     * @param product The updated Product data received in the request body.
+     * @return The updated {@link Product} object after saving to the database.
+     */
+    @PutMapping("{id}")
+    public Product updateProductById(@PathVariable String id,
+                                 @RequestBody Product product){
+        return productService.updateProduct(id, product);
+    }
 }

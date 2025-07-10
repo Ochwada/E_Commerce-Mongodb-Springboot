@@ -92,4 +92,17 @@ public class ProductService {
         return productRepository.findById(id);
     }
 
+
+    /**
+     * Updates an existing Product with the given ID using the provided updated data.
+     *
+     * @param id The unique identifier of the Product to be updated.
+     * @param update The updated Product data. The ID will be set to match the given ID.
+     * @return The updated {@link Product saved in the database.
+     */
+    public Product updateProduct (String id, Product update){
+        update.setId(id);
+        return  productRepository.save(update);
+    }
+
 }
